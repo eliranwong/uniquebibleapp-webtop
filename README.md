@@ -84,9 +84,9 @@ To build a docker image from this repository:
 
 > docker build -t uniquebibleapp .
 
-# For macOS users
+# For macOS users ONLY
 
-On macOS, to enable audio features for Unique Bible App webtop version text-to-speech features, 
+On macOS, to enable audio or text-to-speech features, 
 
 1) <b>On host macOS terminal, run:</b>
 
