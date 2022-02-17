@@ -1,0 +1,7 @@
+.jenkins-external
+.DS_Store
+root/defaults/uba/bibles.sqlite
+root/defaults/uba/cCBSC.commentary
+root/defaults/uba/images.sqlite
+root/defaults/uba/indexes2.sqlite
+root/defaults/uba/morphology.sqlite
