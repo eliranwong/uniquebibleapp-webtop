@@ -95,8 +95,8 @@ RUN \
   # Chrome OS core fonts
   pacman -S --noconfirm --needed ttf-croscore && \
   # Chinese fonts
-  sh -c 'echo "zh_CN.UTF-8 UTF-8" >> /etc/locale.gen' && \
-  locale-gen && \
+  # sh -c 'echo "zh_CN.UTF-8 UTF-8" >> /etc/locale.gen' && \
+  # locale-gen && \
   pacman -S --noconfirm --needed wqy-bitmapfont wqy-zenhei ttf-arphic-ukai ttf-arphic-uming opendesktop-fonts wqy-microhei wqy-microhei-lite && \
   pacman -S --noconfirm --needed adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts noto-fonts-cjk
 # To manually install Google fonts

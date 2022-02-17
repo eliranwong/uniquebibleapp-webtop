@@ -6,16 +6,15 @@
         mkdir -p /config/.config/openbox && \
         cp /defaults/menu.xml /config/.config/openbox/menu.xml && \
         chown -R abc:abc /config/.config
-# Add /config/.bashrc if it does not exist
-[[ ! -f "/config/.bashrc" ]] && \
+# Update /config/.bashrc & /config/.xinitrc if it does not exist
+[[ ! -f "/config/.setup_done" ]] && \
     export PATH="${PATH}:/config/.local/bin" && \
     echo 'export PATH="${PATH}:/config/.local/bin"' >> /config/.bashrc && \
     echo 'alias uba="/config/UniqueBible/uba.py docker"' >> /config/.bashrc && \
-    chown abc:abc /config/.bashrc
-# Add /config/.xinitrc if it does not exist
-[[ ! -f "/config/.xinitrc" ]] && \
+    chown abc:abc /config/.bashrc && \
     echo $'export XMODIFIERS="@im=fcitx"\nexport XIM_PROGRAM="fcitx"\nexport GTK_IM_MODULE="fcitx"\nexport QT_IM_MODULE="fcitx"' >> /config/.xinitrc && \
-    chown abc:abc /config/.xinitrc
+    chown abc:abc /config/.xinitrc && \
+    echo 'DONE!' >> /config/.setup_done
 # Download Unique Bible App if it does not exist
 [[ ! -d "/config/UniqueBible" ]] && \
     sudo runuser -l abc -c 'pip install --no-cache --upgrade pip' && \
@@ -25,23 +24,23 @@
     chmod +x /config/UniqueBible/UniqueBibleApp.sh && \
     chown abc:abc /config/UniqueBible/UniqueBibleApp.sh
 # Install some Unique Bible App databases if they do not exist in UBA directory
-[[ -f "/defaults/uba/bibles.sqlite" -a ! -f "/config/UniqueBible/marvelData/bibles.sqlite" ]] && \
+[[ -f "/defaults/uba/bibles.sqlite" && ! -f "/config/UniqueBible/marvelData/bibles.sqlite" ]] && \
     cp /defaults/uba/bibles.sqlite /config/UniqueBible/marvelData/bibles.sqlite && \
     chown abc:abc /config/UniqueBible/marvelData/bibles.sqlite && \
     rm /defaults/uba/bibles.sqlite
-[[ -f "/defaults/uba/images.sqlite" -a ! -f "/config/UniqueBible/marvelData/images.sqlite" ]] && \
+[[ -f "/defaults/uba/images.sqlite" && ! -f "/config/UniqueBible/marvelData/images.sqlite" ]] && \
     cp /defaults/uba/images.sqlite /config/UniqueBible/marvelData/images.sqlite && \
     chown abc:abc /config/UniqueBible/marvelData/images.sqlite && \
     rm "/defaults/uba/images.sqlite"
-[[ -f "/defaults/uba/indexes2.sqlite" -a ! -f "/config/UniqueBible/marvelData/indexes2.sqlite" ]] && \
+[[ -f "/defaults/uba/indexes2.sqlite" && ! -f "/config/UniqueBible/marvelData/indexes2.sqlite" ]] && \
     cp /defaults/uba/indexes2.sqlite /config/UniqueBible/marvelData/indexes2.sqlite && \
     chown abc:abc /config/UniqueBible/marvelData/indexes2.sqlite && \
     rm "/defaults/uba/indexes2.sqlite"
-[[ -f "/defaults/uba/morphology.sqlite" -a ! -f "/config/UniqueBible/marvelData/morphology.sqlite" ]] && \
+[[ -f "/defaults/uba/morphology.sqlite" && ! -f "/config/UniqueBible/marvelData/morphology.sqlite" ]] && \
     cp /defaults/uba/morphology.sqlite /config/UniqueBible/marvelData/morphology.sqlite && \
     chown abc:abc /config/UniqueBible/marvelData/morphology.sqlite && \
     rm "/defaults/uba/morphology.sqlite"
-[[ -f "/defaults/uba/cCBSC.commentary" -a ! -f "/config/UniqueBible/marvelData/commentaries/cCBSC.commentary" ]] && \
+[[ -f "/defaults/uba/cCBSC.commentary" && ! -f "/config/UniqueBible/marvelData/commentaries/cCBSC.commentary" ]] && \
     cp /defaults/uba/cCBSC.commentary /config/UniqueBible/marvelData/commentaries/cCBSC.commentary && \
     chown abc:abc /config/UniqueBible/marvelData/commentaries/cCBSC.commentary && \
     rm /defaults/uba/cCBSC.commentary
