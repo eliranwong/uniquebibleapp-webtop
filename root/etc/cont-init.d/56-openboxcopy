@@ -17,8 +17,9 @@
     echo 'DONE!' >> /config/.setup_done
 # Download Unique Bible App if it does not exist
 [[ ! -d "/config/UniqueBible" ]] && \
-    sudo runuser -l abc -c 'pip install --no-cache --upgrade pip' && \
-    sudo runuser -l abc -c 'git clone https://github.com/eliranwong/UniqueBible /config/UniqueBible' && \
+    runuser -l abc -c 'pip install --no-cache --upgrade pip' && \
+    runuser -l abc -c 'git clone https://github.com/eliranwong/UniqueBible /config/UniqueBible' && \
+    runuser -l abc -c 'pip3 install -r /config/UniqueBible/requirements.txt' && \
     #chown -R abc:abc /config/UniqueBible && \
     echo $'#\!/usr/bin/python3\n/config/UniqueBible/uba.py docker' >> /config/UniqueBible/UniqueBibleApp.sh && \
     chmod +x /config/UniqueBible/UniqueBibleApp.sh && \
