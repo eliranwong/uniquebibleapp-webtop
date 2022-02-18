@@ -168,7 +168,7 @@ Or run in terminal:
 
 This line above depends on what local path you specified in docker build command, e.g.:
 
-# Re-install Unique Bible App
+# Reinstall Unique Bible App
 
 To re-install Unique Bible App without uninstalling webtop, simply uninstall it and restart docker container "uniquebibleapp".
 
