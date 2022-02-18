@@ -52,7 +52,7 @@ Read FIRST at: https://github.com/eliranwong/uniquebibleapp-webtop#for-macos-use
 
 > docker run -d --name=uniquebibleapp --security-opt seccomp=unconfined <b>-e PUID=501 -e PGID=20</b> -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v ~/uniquebibleapp-webtop:/config -v /var/run/docker.sock:/var/run/docker.sock <b>-v ~/.config/pulse:/config/.config/pulse</b> --shm-size="1gb" --restart unless-stopped eliranwong/<b>uniquebibleappaudiotweaked</b>
 
-<b>Option (3) - On other Operation systems (e.g. Windows, Linux, ChomeOS):</b>
+<b>Option (3) - Other Operation systems (e.g. Windows, Linux, ChomeOS):</b>
 
 A single-line command to setup everything:
 
