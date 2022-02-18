@@ -6,9 +6,11 @@ We create a docker image to help <a href="https://github.com/eliranwong/UniqueBi
 
 With <a href="https://www.docker.com">docker</a> installed, you simply need a web browser to access Unique Bible App desktop version, even OFFLINE.
 
-There are other different ways to install Unique Bible App, but setup of essentail packages and dependencies may be challenging to non-technical users.  Therefore, we package and setup everything for you, to save you from all the troubles.
+# Recommended Way to Install Unique Bible App
 
-We recommend you to use this webtop version, so you may get the most of our Unique Bible App.  We added some extra features to the webtop version.
+We recommend our users to use this webtop version for running Unique Bible App, so you may get the most of our Unique Bible App.  We integrated some extra features to the webtop version, e.g. Google text-to-speech feature, menu to desktop GUI applications.
+
+There are other different ways to install Unique Bible App, but setup of essentail packages and dependencies may be challenging to non-technical users.  Therefore, we package and setup everything for you, to save you from all the troubles.
 
 Using webtop version of Unique Bible App also gives you a unified experience across different operating systems or platforms, e.g. Windows, macOS (both Intel & Apple chips are supported), ChromeOS, Linux distributions.
 
@@ -18,7 +20,9 @@ On top of our standard docker image, we have customised an additional image for 
 
 https://github.com/eliranwong/UniqueBible
 
-# About Webtops
+https://github.com/eliranwong/uniquebibleapp-webtop
+
+# About Webtop
 
 By webtop, we mean running desktop or desktop applications on a web browser.
 
