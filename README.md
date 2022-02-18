@@ -2,12 +2,24 @@
 
 Unique Bible App desktop version runs on Arch Linux webtop
 
-With this package, you can now run Unique Bible App full desktop version on Windows / macOS / ChromeOS / Linux simply with a web browser.
+We create a docker image to help <a href="https://github.com/eliranwong/UniqueBible">Unique Bible App</a> users to install and run full desktop version with minimum effort.
+
+With <a href="https://www.docker.com">docker</a> installed, you simply need a web browser to access Unique Bible App desktop version, even OFFLINE.
+
+There are other different ways to install Unique Bible App, but setup of essentail packages and dependencies may be challenging to non-technical users.  Therefore, we package and setup everything for you, to save you from all the troubles.
+
+We recommend you to use this webtop version, so you may get the most of our Unique Bible App.  Using webtop version of Unique Bible App gives you a unified experience across different operating systems or platforms, e.g. Windows, macOS (both Intel & Apple chips are supported), ChromeOS, Linux distributions.
+
+On top of our standard docker image, we have customised an additional image for users running macOS with Apple chips, e.g. M1.  You may check our notes below for more details.
 
 # About Unique Bible App
+
 https://github.com/eliranwong/UniqueBible
 
 # About Webtops
+
+By webtop, we mean running desktop or desktop applications on a web browser.
+
 https://www.linuxserver.io/blog/2021-05-05-meet-webtops-a-linux-desktop-environment-in-your-browser
 
 # Install Docker FIRST
