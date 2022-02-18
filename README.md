@@ -24,7 +24,9 @@ https://www.linuxserver.io/blog/2021-05-05-meet-webtops-a-linux-desktop-environm
 
 # Install Docker FIRST
 
-You can install docker on Windows, macOS, Linux, ChromeOS.
+If you have not installed docker, install it first!
+
+Docker is cross-platform.  You can run it on Windows, macOS, Linux and ChromeOS.
 
 You may check our notes about docker setup at: https://github.com/eliranwong/ArchLinuxWebtop#setup-docker
 
@@ -36,11 +38,21 @@ With <a href="https://www.docker.com">docker</a> installed FIRST, run:
 
 Use either one of the following, depending on your OS:
 
-For macOS Users:
+For macOS Users (Apple chip M1):
 
-> docker run -d --name=uniquebibleapp --security-opt seccomp=unconfined -e PUID=501 -e PGID=20 -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v ~/uniquebibleapp-webtop:/config -v /var/run/docker.sock:/var/run/docker.sock -v ~/.config/pulse:/config/.config/pulse --shm-size="1gb" --restart unless-stopped eliranwong/uniquebibleapp
+Read FIRST at: https://github.com/eliranwong/uniquebibleapp-webtop#for-macos-users-only
+
+> docker run -d --name=uniquebibleapp --security-opt seccomp=unconfined -e PUID=501 -e PGID=20 -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v ~/uniquebibleapp-webtop:/config -v /var/run/docker.sock:/var/run/docker.sock -v ~/.config/pulse:/config/.config/pulse --shm-size="1gb" --restart unless-stopped eliranwong/uniquebibleappapplechip
+
+For macOS Users (Intel chip):
+
+Read FIRST at: https://github.com/eliranwong/uniquebibleapp-webtop#for-macos-users-only
+
+> docker run -d --name=uniquebibleapp --security-opt seccomp=unconfined -e PUID=501 -e PGID=20 -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v ~/uniquebibleapp-webtop:/config -v /var/run/docker.sock:/var/run/docker.sock -v ~/.config/pulse:/config/.config/pulse --shm-size="1gb" --restart unless-stopped eliranwong/uniquebibleappaudiotweaked
 
 For other OS Users:
+
+A single-line command to setup everything:
 
 > sudo docker run -d --name=uniquebibleapp --security-opt seccomp=unconfined -e PUID=1000 -e PGID=1000 -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v ~/uniquebibleapp-webtop:/config -v /var/run/docker.sock:/var/run/docker.sock --shm-size="1gb" --restart unless-stopped eliranwong/uniquebibleapp
 
@@ -86,6 +98,8 @@ To facilitate the use of Unique Bible App, we also install a few GUI apps for yo
 
 You can launch these apps via command line tools or right-click webtop GUI context menu.
 
+We also add some GUI apps to Unique Bible App menu, so that users can launch them without going to desktop first.
+
 # For developers
 
 To build a docker image from this repository:
@@ -98,7 +112,7 @@ To build a docker image from this repository:
 
 # For macOS users ONLY
 
-On macOS, to enable audio or text-to-speech features, 
+On macOS, you need an extra step to enable audio or text-to-speech features on our webtop, 
 
 1) <b>On host macOS terminal, run:</b>
 
