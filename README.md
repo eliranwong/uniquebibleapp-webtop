@@ -1,7 +1,3 @@
-# Tweak Audio Branch
-
-This branch is created to tweak audio for macOS users.
-
 # Unique Bible App [weptop version]
 
 Unique Bible App desktop version runs on Arch Linux webtop
