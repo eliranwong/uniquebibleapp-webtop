@@ -117,3 +117,29 @@ On macOS, to enable audio or text-to-speech features,
 > sudo sh -c 'echo "PULSE_SERVER=host.docker.internal" >> /etc/environment'
 
 Read more at https://github.com/eliranwong/ArchLinuxWebtop#setup-audio-macos-users-only
+
+# Uninstall Unique BIble App + webtop
+
+* To remove Unique Bible App docker image
+
+> sudo docker rm -f uniquebibleapp
+
+Check uniquebibleapp image id with:
+
+> sudo docker images
+
+Remove image file
+
+> sudo docker rmi [imageid]
+
+* To remove uniquebibleapp data
+
+It depends on what local path you specified in docker build command, e.g.:
+
+> rm -rf ~/uniquebibleapp-webtop/UniqueBible
+
+* To remove all webtop data
+
+Again, it depends on what local path you specified in docker build command, e.g.:
+
+> rm -rf ~/uniquebibleapp-webtop
