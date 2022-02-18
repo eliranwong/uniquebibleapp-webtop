@@ -38,19 +38,19 @@ With <a href="https://www.docker.com">docker</a> installed FIRST, run:
 
 We provide three different images to suit different users (differences are highlighted in bold below), select one to fit your operation system:
 
-* Apple macOS (Apple chip M1):
+<b>Option (1) - On Apple macOS (Apple chip M1):</b>
 
 Read FIRST at: https://github.com/eliranwong/uniquebibleapp-webtop#for-macos-users-only
 
 > docker run -d --name=uniquebibleapp --security-opt seccomp=unconfined <b>-e PUID=501 -e PGID=20</b> -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v ~/uniquebibleapp-webtop:/config -v /var/run/docker.sock:/var/run/docker.sock <b>-v ~/.config/pulse:/config/.config/pulse</b> --shm-size="1gb" --restart unless-stopped eliranwong/<b>uniquebibleappapplechip</b>
 
-* Apple macOS (Intel chip):
+<b>Option (2) - On Apple macOS (Intel chip):</b>
 
 Read FIRST at: https://github.com/eliranwong/uniquebibleapp-webtop#for-macos-users-only
 
 > docker run -d --name=uniquebibleapp --security-opt seccomp=unconfined <b>-e PUID=501 -e PGID=20</b> -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v ~/uniquebibleapp-webtop:/config -v /var/run/docker.sock:/var/run/docker.sock <b>-v ~/.config/pulse:/config/.config/pulse</b> --shm-size="1gb" --restart unless-stopped eliranwong/<b>uniquebibleappaudiotweaked</b>
 
-* Other Operation systems (e.g. Windows, Linux, ChomeOS):
+<b>Option (3) - On other Operation systems (e.g. Windows, Linux, ChomeOS):</b>
 
 A single-line command to setup everything:
 
