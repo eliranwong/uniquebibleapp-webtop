@@ -64,9 +64,11 @@ Notes:
 
 2) "~/uniquebibleapp-webtop" is the local path for storing webtop home directory.  You may change to suit your own needs. 
 
-# To run Unique Bible App
+# To open Unique Bible App
 
-To run Unique Bible App, simple open "localhost:3000" in a web browser.
+To run Unique Bible App, simply open the following url in a web browser:
+
+> localhost:3000
 
 Running Unique Bible App the first time takes extra time before you can load "localhost:3000", as have a script to help you download and setup everything needed for running UniqueBible.app.  During the setup you may see a Terminal app opened and running the setup process.  Please expect to wait for at least 10 minutes for the setup.  This applies to the first run ONLY.  When the setup is finished, Unique Bible App will launch to fill up the web browser.  During the setup, please do not try to launch the app yourself, or it will cause extra delay.
 
