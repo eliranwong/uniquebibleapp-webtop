@@ -106,6 +106,12 @@ You can also use your host file manager to access the "UniqueBibleApp" folder, l
 
 You can change Unique Bible App main window size via menu: UniqueBible > Window Layout > Window Size.
 
+Alternately, use keyboard key combo "Ctrl + Shift + U" to toggle full screen mode.
+
+# Hide Web Browser Toolbar
+
+You can use the sidemenu button [a black dot] to toggle full screen mode of the browser not Unique Bible App
+
 # Restart Unique Bible App
 
 By default, Unique Bible App is automatically launched when you first log into the web interface.  In case you close it and want to restart it, right click on the webtop and select "Unique Bible App".
