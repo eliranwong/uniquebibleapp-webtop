@@ -16,6 +16,10 @@ Using webtop version of Unique Bible App also gives you a unified experience acr
 
 On top of our standard docker image, we have customised an additional image for users running macOS with Apple chips, e.g. M1.  You may check our notes below for more details.
 
+# Screenshot
+
+<img width="1440" alt="Screenshot 2022-02-18 at 19 09 09" src="https://user-images.githubusercontent.com/25262722/154747249-adf94293-eaab-43aa-9461-04d4d688b3d1.png">
+
 # About Unique Bible App
 
 https://github.com/eliranwong/UniqueBible
