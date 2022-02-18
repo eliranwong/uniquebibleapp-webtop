@@ -8,7 +8,7 @@ With <a href="https://www.docker.com">docker</a> installed, you simply need a we
 
 # Recommended
 
-We recommend our users to use this webtop version for running Unique Bible App, so you may get the most of our Unique Bible App.  We integrated some extra features to the webtop version, e.g. Google text-to-speech feature, menu to desktop GUI applications.
+We recommend our users to use this webtop version for running Unique Bible App, so they may get the most of our Unique Bible App.  We integrated some extra features to the webtop version, e.g. Google text-to-speech feature, menu to desktop GUI applications.
 
 There are other different ways to install Unique Bible App, but setup of essentail packages and dependencies may be challenging to non-technical users.  Therefore, we package and setup everything for you, to save you from all the troubles.
 
