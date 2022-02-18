@@ -144,7 +144,7 @@ Depends on your macOS default SHELL, use only one of the following two commands:
 
 > echo 'pulseaudio --load=module-native-protocol-tcp --exit-idle-time=-1 --daemon' >> ~/.bash_profile
 
-<b>Notes about SHELL mentioned above:</b>
+<b>About SHELL mentioned above:</b>
 
 Recent macOS versions use zsh by default, older versions use bash by default.  If you are not sure, run the following command to check:
 
@@ -158,11 +158,11 @@ Read more at https://github.com/eliranwong/ArchLinuxWebtop#setup-audio-macos-use
 
 > sudo docker rm -f uniquebibleapp
 
-Check uniquebibleapp image id with:
+* Check uniquebibleapp image id with:
 
 > sudo docker images
 
-Remove image file
+* Remove image file
 
 > sudo docker rmi [imageid]
 
