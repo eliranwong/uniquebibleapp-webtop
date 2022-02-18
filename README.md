@@ -102,6 +102,14 @@ On macOS, to enable audio or text-to-speech features,
 
 1) <b>On host macOS terminal, run:</b>
 
+We use <a href="https://brew.sh/">brew</a> to install pulseaudio for connection macOS speakers to our webtop.
+
+If you haven't installed brew, install it:
+  
+> /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  
+Install pulseaudio and run it:
+  
 > brew install pulseaudio
 
 > pulseaudio --load=module-native-protocol-tcp --exit-idle-time=-1 --daemon
@@ -117,16 +125,6 @@ On macOS, to enable audio or text-to-speech features,
 (For bash users)
 
 > echo 'pulseaudio --load=module-native-protocol-tcp --exit-idle-time=-1 --daemon' >> ~/.bash_profile
-
-2) <b>On Arch Linux webtop terminal, run:</b>
-
-> sudo pacman -Syu --noconfirm
-
-> sudo pacman -S --noconfirm pulseaudio
-
-> export PULSE_SERVER=host.docker.internal
-
-> sudo sh -c 'echo "PULSE_SERVER=host.docker.internal" >> /etc/environment'
 
 Read more at https://github.com/eliranwong/ArchLinuxWebtop#setup-audio-macos-users-only
 
