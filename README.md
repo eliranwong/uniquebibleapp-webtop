@@ -118,7 +118,7 @@ To build a docker image from this repository:
 
 On macOS, you need few extra steps to enable audio or text-to-speech features on our webtop, 
 
-Run the following commands on your macOS Terminal app.
+Run the following commands on your macOS Terminal app (Applications > Utilities > Terminal.app):
 
 <b>1) Install brew</b>
 
@@ -156,7 +156,31 @@ Recent macOS versions use zsh by default, older versions use bash by default.  I
 
 Read more at https://github.com/eliranwong/ArchLinuxWebtop#setup-audio-macos-users-only
 
-# Uninstall Unique BIble App + webtop
+# Uninstall Unique Bible App
+
+* To uninstall Unique Bible App ONLY
+
+You can use file manager thunar to delete folder "~/uniquebibleapp-webtop/UniqueBible"
+
+Or run in terminal:
+
+> rm -rf ~/uniquebibleapp-webtop/UniqueBible
+
+This line above depends on what local path you specified in docker build command, e.g.:
+
+# Re-install Unique Bible App
+
+To re-install Unique Bible App without uninstalling webtop, simply uninstall it and restart docker container "uniquebibleapp".
+
+When container docker restarts "uniquebibleapp" and find that /config/uniquebibleapp-webtop/UniqueBible does not exist, it reinstall Unique Bible App for you.
+
+# Uninstall Everything
+
+* To remove all webtop data
+
+> rm -rf ~/uniquebibleapp-webtop
+
+Again, this line above depends on what local path you specified in docker build command, e.g.:
 
 * To remove Unique Bible App docker image
 
@@ -169,15 +193,3 @@ Read more at https://github.com/eliranwong/ArchLinuxWebtop#setup-audio-macos-use
 * Remove image file
 
 > sudo docker rmi [imageid]
-
-* To remove uniquebibleapp data
-
-It depends on what local path you specified in docker build command, e.g.:
-
-> rm -rf ~/uniquebibleapp-webtop/UniqueBible
-
-* To remove all webtop data
-
-Again, it depends on what local path you specified in docker build command, e.g.:
-
-> rm -rf ~/uniquebibleapp-webtop
