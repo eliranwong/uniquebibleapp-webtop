@@ -182,8 +182,6 @@ Recent macOS versions use zsh by default, older versions use bash by default.  I
 
 > echo $SHELL
 
-Read more at https://github.com/eliranwong/ArchLinuxWebtop#setup-audio-macos-users-only
-
 # Uninstall Unique Bible App
 
 * To uninstall Unique Bible App ONLY
