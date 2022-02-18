@@ -112,19 +112,21 @@ To build a docker image from this repository:
 
 # For macOS users ONLY
 
-On macOS, you need an extra step to enable audio or text-to-speech features on our webtop, 
+On macOS, you need few extra steps to enable audio or text-to-speech features on our webtop, 
 
-1) <b>On host macOS terminal, run:</b>
+<b>1) Install brew</b>
 
 We use <a href="https://brew.sh/">brew</a> to install pulseaudio for connection macOS speakers to our webtop.
 
 If you haven't installed brew, install it:
   
 > /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  
+
 Install pulseaudio and run it:
   
 > brew install pulseaudio
+
+<b>2) Run pulseaudio</b>
 
 > pulseaudio --load=module-native-protocol-tcp --exit-idle-time=-1 --daemon
 
@@ -139,6 +141,8 @@ Install pulseaudio and run it:
 (For bash users)
 
 > echo 'pulseaudio --load=module-native-protocol-tcp --exit-idle-time=-1 --daemon' >> ~/.bash_profile
+
+<b>2) Auto-run pulseaudio for future startup</b>
 
 Read more at https://github.com/eliranwong/ArchLinuxWebtop#setup-audio-macos-users-only
 
