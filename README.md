@@ -8,7 +8,9 @@ With <a href="https://www.docker.com">docker</a> installed, you simply need a we
 
 There are other different ways to install Unique Bible App, but setup of essentail packages and dependencies may be challenging to non-technical users.  Therefore, we package and setup everything for you, to save you from all the troubles.
 
-We recommend you to use this webtop version, so you may get the most of our Unique Bible App.  Using webtop version of Unique Bible App gives you a unified experience across different operating systems or platforms, e.g. Windows, macOS (both Intel & Apple chips are supported), ChromeOS, Linux distributions.
+We recommend you to use this webtop version, so you may get the most of our Unique Bible App.  We added some extra features to the webtop version.
+
+Using webtop version of Unique Bible App also gives you a unified experience across different operating systems or platforms, e.g. Windows, macOS (both Intel & Apple chips are supported), ChromeOS, Linux distributions.
 
 On top of our standard docker image, we have customised an additional image for users running macOS with Apple chips, e.g. M1.  You may check our notes below for more details.
 
