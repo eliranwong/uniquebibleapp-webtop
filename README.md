@@ -28,6 +28,8 @@ https://www.linuxserver.io/blog/2021-05-05-meet-webtops-a-linux-desktop-environm
 
 You need 11.51GB on your computer to install our webtop version.
 
+Yes, it is huge, because we try our best to package everything for you.
+
 # Install Docker FIRST
 
 If you have not installed docker, install it first!
