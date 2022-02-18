@@ -46,9 +46,9 @@ Or learn more about docker at https://www.docker.com
 
 # For end-users
 
-With <a href="https://www.docker.com">docker</a> installed FIRST, run:
-
 We provide three different images to suit different users (differences are highlighted in bold below), select one to fit your operation system:
+
+With <a href="https://www.docker.com">docker</a> installed FIRST, run:
 
 <b>Option (1) - On Apple macOS (Apple chip M1):</b>
 
