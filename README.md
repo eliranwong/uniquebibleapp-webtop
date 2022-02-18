@@ -38,23 +38,23 @@ With <a href="https://www.docker.com">docker</a> installed FIRST, run:
 
 Use either one of the following, depending on your OS:
 
-For macOS Users (Apple chip M1):
+* Apple macOS (Apple chip M1):
 
 Read FIRST at: https://github.com/eliranwong/uniquebibleapp-webtop#for-macos-users-only
 
-> docker run -d --name=uniquebibleapp --security-opt seccomp=unconfined -e PUID=501 -e PGID=20 -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v ~/uniquebibleapp-webtop:/config -v /var/run/docker.sock:/var/run/docker.sock -v ~/.config/pulse:/config/.config/pulse --shm-size="1gb" --restart unless-stopped eliranwong/uniquebibleappapplechip
+> docker run -d --name=uniquebibleapp --security-opt seccomp=unconfined <b>-e PUID=501 -e PGID=20</b> -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v ~/uniquebibleapp-webtop:/config -v /var/run/docker.sock:/var/run/docker.sock <b>-v ~/.config/pulse:/config/.config/pulse</b> --shm-size="1gb" --restart unless-stopped eliranwong/<b>uniquebibleappapplechip
 
-For macOS Users (Intel chip):
+* Apple macOS (Intel chip):
 
 Read FIRST at: https://github.com/eliranwong/uniquebibleapp-webtop#for-macos-users-only
 
-> docker run -d --name=uniquebibleapp --security-opt seccomp=unconfined -e PUID=501 -e PGID=20 -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v ~/uniquebibleapp-webtop:/config -v /var/run/docker.sock:/var/run/docker.sock -v ~/.config/pulse:/config/.config/pulse --shm-size="1gb" --restart unless-stopped eliranwong/uniquebibleappaudiotweaked
+> docker run -d --name=uniquebibleapp --security-opt seccomp=unconfined <b>-e PUID=501 -e PGID=20</b> -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v ~/uniquebibleapp-webtop:/config -v /var/run/docker.sock:/var/run/docker.sock <b>-v ~/.config/pulse:/config/.config/pulse</b> --shm-size="1gb" --restart unless-stopped eliranwong/<b>uniquebibleappaudiotweaked</b>
 
-For other OS Users:
+* Other Operation systems (e.g. Windows, Linux, ChomeOS):
 
 A single-line command to setup everything:
 
-> sudo docker run -d --name=uniquebibleapp --security-opt seccomp=unconfined -e PUID=1000 -e PGID=1000 -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v ~/uniquebibleapp-webtop:/config -v /var/run/docker.sock:/var/run/docker.sock --shm-size="1gb" --restart unless-stopped eliranwong/uniquebibleapp
+> sudo docker run -d --name=uniquebibleapp --security-opt seccomp=unconfined <b>-e PUID=1000 -e PGID=1000</b> -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v ~/uniquebibleapp-webtop:/config -v /var/run/docker.sock:/var/run/docker.sock --shm-size="1gb" --restart unless-stopped eliranwong/<b>uniquebibleapp</b>
 
 Notes:
 
