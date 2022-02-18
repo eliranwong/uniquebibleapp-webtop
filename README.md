@@ -24,6 +24,10 @@ By webtop, we mean running desktop or desktop applications on a web browser.
 
 https://www.linuxserver.io/blog/2021-05-05-meet-webtops-a-linux-desktop-environment-in-your-browser
 
+# Storage Size
+
+You need 11.51GB on your computer to install our webtop version.
+
 # Install Docker FIRST
 
 If you have not installed docker, install it first!
@@ -79,6 +83,18 @@ Running Unique Bible App the first time takes extra time before you can load "lo
 You can also launch Unique Bible App from a terminal app by running:
 
 > uba
+
+# Access Unique Bible App Files
+
+If you want to add bibles or some other resources manually to Unique Bible App, you may want to know where is the UniqueBible folder.
+
+If you follow our suggestions in https://github.com/eliranwong/uniquebibleapp-webtop#for-end-users
+
+Unique Bible App is installed in home directory on both host os and webtop.
+
+With web browser, you can access the files in /config/UniqueBible/ with file manager Thunar.
+
+You can also use your host file manager to access the "UniqueBibleApp" folder, located in your home directory.
 
 # Run Unique Bible App in non-fullscreen mode
 
@@ -160,7 +176,7 @@ Read more at https://github.com/eliranwong/ArchLinuxWebtop#setup-audio-macos-use
 
 * To uninstall Unique Bible App ONLY
 
-You can use file manager thunar to delete folder "~/uniquebibleapp-webtop/UniqueBible"
+You can use file manager thunar to delete folder "/config/uniquebibleapp-webtop/UniqueBible"
 
 Or run in terminal:
 
