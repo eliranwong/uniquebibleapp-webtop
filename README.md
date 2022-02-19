@@ -118,15 +118,17 @@ With web browser, you can access the files in /config/UniqueBible/ with file man
 
 You can also use your host file manager to access the "UniqueBibleApp" folder, located in your home directory.
 
-# Run Unique Bible App in non-fullscreen mode
+# Toggle Webtop to fullscreen view
+
+Click the sidemenu button [a black dot], you can find a button to toggle the whole webtop in fullscreen view.
+
+# Toggle Unique Bible App fullscreen view
 
 You can change Unique Bible App main window size via menu: UniqueBible > Window Layout > Window Size.
 
-Alternately, use keyboard key combo "Ctrl + Shift + U" to toggle full screen mode.
+Alternately, use keyboard key combo "Ctrl + Shift + U" to toggle fullscreen view.
 
-# Hide Web Browser Toolbar
-
-You can use the sidemenu button [a black dot] to toggle full screen mode of the browser not Unique Bible App
+From version 28.07, Unique Bible App added a button on toolbar for users to toggle fullscreen view easily.
 
 # Restart Unique Bible App
 
@@ -152,7 +154,7 @@ Keyboard shortcuts is avilalble to individual apps, e.g. control+M to hide/show 
 
 If key combination is same as the host OS, you need to use the virtual keyboard to trigger key combo on webtop.  For example, on macOS, you can use option+TAB to switch between apps on webtop and command+TAB to switch between apps opened on host OS.  On Chrome OS, however, you need to use the virtual keyboard, via the sidemenu button, to trigger alt+TAB, as triggering alt+TAB on physical keyboard switches between apps opened on host OS.
 
-Our webtop uses Openbox as the window manager to handle window applications, like Unique Bible App.  You can use key combo, e.g. to switch between four virtual desktops or applications.  You may refer to https://wiki.debian.org/Openbox#Openbox_default_key_combinations for common key combinations on Openbox.
+Our webtop uses Openbox as the window manager to handle window applications, like Unique Bible App.  You can use key combo, e.g. to switch between four virtual desktops or applications.  For example, alt+ESCAPE could be useful when you want to view other applications opened and placed behind Unique Bible App, which is running in fullscreen view.  You may refer to https://wiki.debian.org/Openbox#Openbox_default_key_combinations for common key combinations on Openbox.
 
 # For developers
 
