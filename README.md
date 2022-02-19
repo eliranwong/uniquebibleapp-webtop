@@ -78,7 +78,7 @@ Notes:
 
 > id [username]
 
-2) "~/uniquebibleapp-webtop" is the local path for storing webtop home directory.  You may change to suit your own needs. For example, you can change it to "~/Documents" so that your webtop home directory matches and shares your Documents folder, located in your host home directory.  However, do not use "~/", which means your home directory, because your host home directory may have files of the same filenames as the webtop home directory, e.g. .bashrc.
+2) "\~/uniquebibleapp-webtop" is the local path for storing webtop home directory.  You may change to suit your own needs. For example, you can change it to "\~/Documents" so that your webtop home directory matches and shares your Documents folder, located in your host home directory.  However, do not use "~/", which means your home directory, because your host home directory may have files of the same filenames as the webtop home directory, e.g. .bashrc.
 
 3) You only need to execute one of the three options above, according to your computer operation system.
 
