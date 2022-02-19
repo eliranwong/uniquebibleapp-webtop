@@ -140,9 +140,9 @@ In case you want to reload the container, run in host terminal:
 
 > docker restart uniquebibleapp
 
-# Additional GUI apps
+# Input Method & GUI Applications & Window Manager
 
-To facilitate the use of Unique Bible App, we also install a few GUI apps for you, e.g.:
+To facilitate the use of Unique Bible App, we also setup an input method, fcitx, and a few GUI apps, e.g.:
 
 > thunar, gthumb, vlc, geany, vlc
 
@@ -155,6 +155,8 @@ Keyboard shortcuts is avilalble to individual apps, e.g. control+M to hide/show 
 If key combination is same as the host OS, you need to use the virtual keyboard to trigger key combo on webtop.  For example, on macOS, you can use option+TAB to switch between apps on webtop and command+TAB to switch between apps opened on host OS.  On Chrome OS, however, you need to use the virtual keyboard, via the sidemenu button, to trigger alt+TAB, as triggering alt+TAB on physical keyboard switches between apps opened on host OS.
 
 Our webtop uses Openbox as the window manager to handle window applications, like Unique Bible App.  You can use key combo, e.g. to switch between four virtual desktops or applications.  For example, alt+ESCAPE could be useful when you want to view other applications opened and placed behind Unique Bible App, which is running in fullscreen view.  You may refer to https://wiki.debian.org/Openbox#Openbox_default_key_combinations for common key combinations on Openbox.
+
+For more about autostart in Openbox, read http://openbox.org/wiki/Help:Autostart 
 
 # For developers
 
