@@ -146,7 +146,13 @@ To facilitate the use of Unique Bible App, we also install a few GUI apps for yo
 
 You can launch these apps via command line tools or right-click webtop GUI context menu.
 
-We also add some GUI apps to Unique Bible App menu, so that users can launch them without going to desktop first.
+From version 28.07 onwards, we added GUI apps shortcuts to Unique Bible App menu, so that users can launch them without going to desktop first.
+
+Keyboard shortcuts is avilalble to individual apps, e.g. control+M to hide/show Thunar's menu bar.
+
+If key combination is same as the host OS, you need to use the virtual keyboard to trigger key combo on webtop.  For example, on macOS, you can use option+TAB to switch between apps on webtop and command+TAB to switch between apps opened on host OS.  On Chrome OS, however, you need to use the virtual keyboard, via the sidemenu button, to trigger alt+TAB, as triggering alt+TAB on physical keyboard switches between apps opened on host OS.
+
+Our webtop uses Openbox as the window manager to handle window applications, like Unique Bible App.  You can use key combo, e.g. to switch between four virtual desktops or applications.  You may refer to https://wiki.debian.org/Openbox#Openbox_default_key_combinations for common key combinations on Openbox.
 
 # For developers
 
