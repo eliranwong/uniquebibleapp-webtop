@@ -142,7 +142,7 @@ In case you want to reload the container, run in host terminal:
 
 To facilitate the use of Unique Bible App, we also install a few GUI apps for you, e.g.:
 
-> thunar, gthumb, vlc, geany,vlc
+> thunar, gthumb, vlc, geany, vlc
 
 You can launch these apps via command line tools or right-click webtop GUI context menu.
 
