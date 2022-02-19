@@ -118,7 +118,7 @@ With web browser, you can access the files in /config/UniqueBible/ with file man
 
 You can also use your host file manager to access the "UniqueBibleApp" folder, located in your home directory.
 
-# Toggle Webtop to fullscreen view
+# Toggle Webtop fullscreen view
 
 Click the sidemenu button [a black dot], you can find a button to toggle the whole webtop in fullscreen view.
 
