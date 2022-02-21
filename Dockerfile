@@ -123,7 +123,9 @@ RUN \
     fcitx5-pinyin-zhwiki \
     rime-pinyin-zhwiki \
     opencc && \
-  sh -c 'echo "export XMODIFIERS=@im=fcitx\nexport GTK_IM_MODULE=fcitx\nexport QT_IM_MODULE=fcitx" >> /etc/environment'
+  sh -c 'echo "XMODIFIERS=@im=fcitx" >> /etc/environment' && \
+  sh -c 'echo "GTK_IM_MODULE=fcitx" >> /etc/environment' && \
+  sh -c 'echo "QT_IM_MODULE=fcitx" >> /etc/environment'
   # You may read https://wiki.archlinux.org/title/Fcitx5 to learn more about fcitx.
 
 RUN \
