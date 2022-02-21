@@ -66,11 +66,11 @@ RUN \
     geany \
     firefox \
     gthumb \
-    vlc && \
-  # Install Firfox addon Video DownloadHelper Companion App 1.6.3
-  wget https://github.com/mi-g/vdhcoapp/releases/download/v1.6.3/net.downloadhelper.coapp-1.6.3-1_amd64.tar.gz && \
-  tar xf net.downloadhelper.coapp-1.6.3-1_amd64.tar.gz -C /usr/local && \
-  /usr/local/net.downloadhelper.coapp-1.6.3/bin/net.downloadhelper.coapp-linux-64 install --system
+    vlc
+  # Install Firfox addon Video DownloadHelper Companion App 1.6.3 [not on Apple chip computer]
+  # wget https://github.com/mi-g/vdhcoapp/releases/download/v1.6.3/net.downloadhelper.coapp-1.6.3-1_amd64.tar.gz && \
+  # tar xf net.downloadhelper.coapp-1.6.3-1_amd64.tar.gz -C /usr/local && \
+  # /usr/local/net.downloadhelper.coapp-1.6.3/bin/net.downloadhelper.coapp-linux-64 install --system
 
 RUN \
   echo "**** setup audio text-to-speech features ****" && \
@@ -123,7 +123,9 @@ RUN \
     fcitx5-pinyin-zhwiki \
     rime-pinyin-zhwiki \
     opencc && \
-  sh -c 'echo "export XMODIFIERS=@im=fcitx\nexport GTK_IM_MODULE=fcitx\nexport QT_IM_MODULE=fcitx" >> /etc/environment'
+  sh -c 'echo "XMODIFIERS=@im=fcitx" >> /etc/environment' && \
+  sh -c 'echo "GTK_IM_MODULE=fcitx" >> /etc/environment' && \
+  sh -c 'echo "QT_IM_MODULE=fcitx" >> /etc/environment'
   # You may read https://wiki.archlinux.org/title/Fcitx5 to learn more about fcitx.
 
 RUN \
