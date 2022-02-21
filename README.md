@@ -34,7 +34,7 @@ https://www.linuxserver.io/blog/2021-05-05-meet-webtops-a-linux-desktop-environm
 
 # Storage Size
 
-You need 11.51GB on your computer to install our webtop version.
+You need 12GB on your computer to install our webtop version.
 
 Yes, it is huge, because we try our best to package everything for you.
 
@@ -90,7 +90,7 @@ To run Unique Bible App, simply open the following url in a web browser:
 
 > localhost:3000
 
-Running Unique Bible App the first time takes extra time before you can load "localhost:3000", as have a script to help you download and setup everything needed for running UniqueBible.app.  During the setup you may see a Terminal app opened and running the setup process.  Please expect to wait for at least 10 minutes for the setup.  This applies to the first run ONLY.  When the setup is finished, Unique Bible App will launch to fill up the web browser.  During the setup, please do not try to launch the app yourself, or it will cause extra delay.
+<b>It takes extra time when Unique Bible App runs the first time</b> before you can load "localhost:3000", as the first run downloads and sets up Unique Bible App latest version.  The first time "localhost:3000" is loaded, you may see a Terminal app opened and running the setup process.  Please expect to wait for around 10 minutes for the setup.  <b>This applies to the first run ONLY</b>.  When the setup is finished, Unique Bible App will automatically launch.  During the setup, please do <b>NOT</b> try to launch the app manually, or it will cause extra delay.
 
 # Touble-shooting "Can't open the page localhost:3000"
 
