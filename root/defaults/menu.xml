@@ -6,10 +6,10 @@
 <item label="Firefox" icon="/usr/share/icons/hicolor/48x48/apps/firefox.png"><action name="Execute"><command>/usr/bin/firefox</command></action></item>
 <item label="Leafpad" icon="/usr/share/icons/hicolor/32x32/apps/leafpad.png"><action name="Execute"><command>/usr/bin/leafpad</command></action></item>
 <item label="Geany" icon="/usr/share/icons/hicolor/48x48/apps/geany.png"><action name="Execute"><command>/usr/bin/geany</command></action></item>
-<item label="GThumb" icon="/defaults/gthumb-icon-300x295.png"><action name="Execute"><command>/usr/bin/gthumb</command></action></item>
+<item label="GThumb" icon="/defaults/icons/gthumb-icon-300x295.png"><action name="Execute"><command>/usr/bin/gthumb</command></action></item>
 <item label="VLC" icon="/usr/share/vlc/vlc.ico"><action name="Execute"><command>/usr/bin/vlc</command></action></item>
-<item label="urxvt" icon="/usr/share/pixmaps/xterm-color_48x48.xpm"><action name="Execute"><command>/usr/bin/urxvt</command></action></item>
-<item label="fcitx" icon="/usr/share/icons/hicolor/48x48/apps/fcitx.png"><action name="Execute"><command>/usr/bin/fcitx-configtool</command></action></item>
+<item label="Konsole" icon="/usr/share/icons/breeze-dark/apps/48/utilities-terminal.svg"><action name="Execute"><command>/usr/bin/konsole</command></action></item>
+<item label="Fcitx5" icon="/usr/share/icons/hicolor/48x48/apps/fcitx.png"><action name="Execute"><command>/usr/bin/fcitx5-config-qt</command></action></item>
 <item label="OBConf" icon="/usr/share/icons/hicolor/48x48/apps/obconf-qt.png"><action name="Execute"><command>/usr/bin/obconf-qt</command></action></item>
 <item label="Reload OB"><action name="Reconfigure"/></item>
 </menu>

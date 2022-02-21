@@ -1,1 +1,2 @@
-urxvt -e '/config/UniqueBible/UniqueBibleApp.sh'
+konsole -e 'python /config/UniqueBible/uba.py docker' &
+/usr/bin/fcitx5 -s 5 > /dev/null 2>&1

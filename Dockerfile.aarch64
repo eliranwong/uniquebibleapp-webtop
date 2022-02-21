@@ -20,6 +20,7 @@ RUN \
     gcc \
     glibc \
     gtk3 \
+    lame \
     python-pip \
     python-setuptools \
     python-pyqt5 \
@@ -58,13 +59,18 @@ RUN \
   echo "**** gui applications ****" && \
   pacman -S --noconfirm --needed \
     obconf-qt \
-    rxvt-unicode \
+    breeze-icons \
+    konsole \
     leafpad \
     # mousepad \
     geany \
     firefox \
     gthumb \
-    vlc
+    vlc && \
+  # Install Firfox addon Video DownloadHelper Companion App 1.6.3
+  wget https://github.com/mi-g/vdhcoapp/releases/download/v1.6.3/net.downloadhelper.coapp-1.6.3-1_amd64.tar.gz && \
+  tar xf net.downloadhelper.coapp-1.6.3-1_amd64.tar.gz -C /usr/local && \
+  /usr/local/net.downloadhelper.coapp-1.6.3/bin/net.downloadhelper.coapp-linux-64 install --system
 
 RUN \
   echo "**** setup audio text-to-speech features ****" && \
@@ -112,13 +118,13 @@ RUN fc-cache -f && rm -rf /var/cache/*
 RUN \
   echo "**** input method ****" && \
   pacman -S --noconfirm --needed \
-    fcitx \
-    fcitx-qt5 \
-    fcitx-im \
-    fcitx-googlepinyin \
-    fcitx-configtool \
-    opencc
-  # You may read https://github.com/eliranwong/ArchLinuxWebtop#input-method-fcitx-optional for setup if you need to use fcitx.
+    fcitx5-im \
+    fcitx5-chinese-addons \
+    fcitx5-pinyin-zhwiki \
+    rime-pinyin-zhwiki \
+    opencc && \
+  sh -c 'echo "export XMODIFIERS=@im=fcitx\nexport GTK_IM_MODULE=fcitx\nexport QT_IM_MODULE=fcitx" >> /etc/environment'
+  # You may read https://wiki.archlinux.org/title/Fcitx5 to learn more about fcitx.
 
 RUN \
   echo "**** cleanup ****" && \

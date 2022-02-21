@@ -1,24 +1,21 @@
 #!/usr/bin/with-contenv bash
 
-# default file copies first run
+# default setup on first run
 [[ ! -f /config/.config/openbox/menu.xml ]] && \
-        chown abc:abc "/defaults/gthumb-icon-300x295.png" && \
-        mkdir -p /config/.config/openbox && \
-        cp /defaults/menu.xml /config/.config/openbox/menu.xml && \
-        chown -R abc:abc /config/.config
-# Update /config/.bashrc & /config/.xinitrc if it does not exist
-[[ ! -f "/config/.setup_done" ]] && \
-    export PATH="${PATH}:/config/.local/bin" && \
+    mkdir -p /config/.config/openbox && \
+    cp /defaults/menu.xml /config/.config/openbox/menu.xml && \
+    # chown abc:abc /config/.config/openbox/menu.xml && \
+    # cp /defaults/menu.xml /etc/xdg/openbox/menu.xml && \
     echo 'export PATH="${PATH}:/config/.local/bin"' >> /config/.bashrc && \
+    echo 'export XDG_RUNTIME_DIR=/tmp/runtime-abc' >> /config/.bashrc && \
     echo 'alias uba="/config/UniqueBible/uba.py docker"' >> /config/.bashrc && \
     chown abc:abc /config/.bashrc && \
-    echo $'export XMODIFIERS="@im=fcitx"\nexport XIM_PROGRAM="fcitx"\nexport GTK_IM_MODULE="fcitx"\nexport QT_IM_MODULE="fcitx"' >> /config/.xinitrc && \
-    chown abc:abc /config/.xinitrc && \
-    echo 'DONE!' >> /config/.setup_done
+    chown -R abc:abc /config/.config && \
+    chown abc:abc "/defaults/icons/gthumb-icon-300x295.png"
 # Download Unique Bible App if it does not exist
 [[ ! -d "/config/UniqueBible" ]] && \
     runuser -l abc -c 'git clone https://github.com/eliranwong/UniqueBible /config/UniqueBible' && \
-    # The following line is not essential as we use runuser command above.
+    # The following line is no longer needed.
     # chown -R abc:abc /config/UniqueBible && \
     # Upgrade pip
     runuser -l abc -c 'pip install --no-cache --upgrade pip' && \
@@ -26,12 +23,12 @@
     # runuser -l abc -c 'pip3 install -r /config/UniqueBible/docker_requirements.txt' && \
     # For some reasons, in docker image, gdown does not work if it is installed in UBA virtualvenv
     # Therefore, gdown is installed globally
-    runuser -l abc -c 'pip3 install gdown' && \
-    # Create the following file for autostart to work on first run of docker container
-    echo $'#\!/usr/bin/python3\n/config/UniqueBible/uba.py docker' >> /config/UniqueBible/UniqueBibleApp.sh && \
+    runuser -l abc -c 'pip3 install gdown'
+# Install some Unique Bible App files or databases if they do not exist in UBA directory
+[[ -f "/defaults/uba/UniqueBibleApp.sh" && ! -f "/config/UniqueBible/UniqueBibleApp.sh" ]] && \
+    cp /defaults/uba/UniqueBibleApp.sh /config/UniqueBible/UniqueBibleApp.sh && \
     chmod +x /config/UniqueBible/UniqueBibleApp.sh && \
     chown abc:abc /config/UniqueBible/UniqueBibleApp.sh
-# Install some Unique Bible App databases if they do not exist in UBA directory
 [[ -f "/defaults/uba/bibles.sqlite" && ! -f "/config/UniqueBible/marvelData/bibles.sqlite" ]] && \
     cp /defaults/uba/bibles.sqlite /config/UniqueBible/marvelData/bibles.sqlite && \
     chown abc:abc /config/UniqueBible/marvelData/bibles.sqlite && \
@@ -52,3 +49,9 @@
     cp /defaults/uba/cCBSC.commentary /config/UniqueBible/marvelData/commentaries/cCBSC.commentary && \
     chown abc:abc /config/UniqueBible/marvelData/commentaries/cCBSC.commentary && \
     rm /defaults/uba/cCBSC.commentary
+[[ -f "/defaults/uba/wordnet.dct.mybible" && ! -f "/config/UniqueBible/thirdParty/dictionaries/wordnet.dct.mybible" ]] && \
+    cp /defaults/uba/wordnet.dct.mybible /config/UniqueBible/thirdParty/dictionaries/wordnet.dct.mybible && \
+    chown abc:abc /config/UniqueBible/thirdParty/dictionaries/wordnet.dct.mybible
+[[ -f "/defaults/uba/WordNet_Ctrl+Shift+D.py" && ! -f "/config/UniqueBible/plugins/context/WordNet_Ctrl+Shift+D.py" ]] && \
+    cp /defaults/uba/WordNet_Ctrl+Shift+D.py /config/UniqueBible/plugins/context/WordNet_Ctrl+Shift+D.py && \
+    chown abc:abc /config/UniqueBible/plugins/context/WordNet_Ctrl+Shift+D.py
