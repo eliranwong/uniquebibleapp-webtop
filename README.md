@@ -38,6 +38,10 @@ You need 12GB on your computer to install our webtop version.
 
 Yes, it is huge, because we try our best to package everything for you.
 
+# Examples of Installation on Different Platforms
+
+* <a href="https://github.com/eliranwong/UniqueBible/wiki/UniqueBibleApp-webtop-on-Windows">Windows</b>, <a href="https://github.com/eliranwong/UniqueBible/wiki/UniqueBibleApp-webtop-on-macOS">macOS</a>, <a href="https://github.com/eliranwong/UniqueBible/wiki/UniqueBibleApp-webtop-on-Chrome-OS">Chrome OS</a>, <a href="https://github.com/eliranwong/UniqueBible/wiki/UniqueBibleApp-webtop-on-Linux">Linux</a>
+
 # Install Docker FIRST
 
 If you have not installed docker, install it first!
