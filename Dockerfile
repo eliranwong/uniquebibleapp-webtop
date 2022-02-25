@@ -17,6 +17,8 @@ RUN \
     wget \
     git \
     nano \
+    locate \
+    plocate \
     gcc \
     glibc \
     gtk3 \
@@ -65,6 +67,8 @@ RUN \
     # mousepad \
     geany \
     firefox \
+    jre-openjdk \
+    libreoffice-still \
     gthumb \
     vlc && \
   # Install Firfox addon Video DownloadHelper Companion App 1.6.3
@@ -137,6 +141,9 @@ RUN \
 
 # add local files
 COPY /root /
+
+# update locate database
+RUN updatedb
 
 # ports and volumes
 EXPOSE 3000
