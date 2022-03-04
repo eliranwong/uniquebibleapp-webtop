@@ -9,6 +9,7 @@
     echo 'export PATH="${PATH}:/config/.local/bin"' >> /config/.bashrc && \
     echo 'export XDG_RUNTIME_DIR=/tmp/runtime-abc' >> /config/.bashrc && \
     echo 'alias uba="/config/UniqueBible/uba.py docker"' >> /config/.bashrc && \
+    echo 'alias update="sudo pacman -Syu --noconfirm && sudo updatedb"' >> /config/.bashrc && \
     chown abc:abc /config/.bashrc && \
     chown -R abc:abc /config/.config && \
     chown abc:abc "/defaults/icons/gthumb-icon-300x295.png"

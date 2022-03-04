@@ -25,9 +25,14 @@ RUN \
     lame \
     python-pip \
     python-setuptools \
-    python-pyqt5 \
-    python-pyqt5-sip \
-    python-pyqt5-webengine \
+    # Install PySide2
+    pyside2 \
+    pyside2-tools \
+    qt5-webengine \
+    # Alternately, install PyQt5
+    # python-pyqt5 \
+    # python-pyqt5-sip \
+    # python-pyqt5-webengine \
     python-qtpy
 
 RUN \
@@ -69,6 +74,7 @@ RUN \
     firefox \
     jre-openjdk \
     libreoffice-still \
+    sqlitebrowser \
     gthumb \
     vlc && \
   # Install Firfox addon Video DownloadHelper Companion App 1.6.3
@@ -117,6 +123,13 @@ RUN chown -R :users /usr/share/fonts-main
 RUN mkdir -p /usr/share/fonts/truetype/google-fonts
 RUN find /usr/share/fonts-main/ -name "*.ttf" -exec install -m644 {} /usr/share/fonts/truetype/google-fonts/ \; || return 1
 RUN rm -f gf.tar.gz
+# To manually install wps-fonts
+RUN git clone https://github.com/iamdh4/ttf-wps-fonts.git
+RUN mkdir /usr/share/fonts/wps-fonts
+RUN mv ttf-wps-fonts/* /usr/share/fonts/wps-fonts
+RUN chown -R :users /usr/share/fonts/wps-fonts
+RUN rm -rf ttf-wps-fonts
+# Build font information caches
 RUN fc-cache -f && rm -rf /var/cache/*
 
 RUN \
