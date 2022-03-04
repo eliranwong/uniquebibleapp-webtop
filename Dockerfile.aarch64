@@ -76,11 +76,11 @@ RUN \
     libreoffice-still \
     sqlitebrowser \
     gthumb \
-    vlc && \
+    vlc
   # Install Firfox addon Video DownloadHelper Companion App 1.6.3
-  wget https://github.com/mi-g/vdhcoapp/releases/download/v1.6.3/net.downloadhelper.coapp-1.6.3-1_amd64.tar.gz && \
-  tar xf net.downloadhelper.coapp-1.6.3-1_amd64.tar.gz -C /usr/local && \
-  /usr/local/net.downloadhelper.coapp-1.6.3/bin/net.downloadhelper.coapp-linux-64 install --system
+  # wget https://github.com/mi-g/vdhcoapp/releases/download/v1.6.3/net.downloadhelper.coapp-1.6.3-1_amd64.tar.gz && \
+  # tar xf net.downloadhelper.coapp-1.6.3-1_amd64.tar.gz -C /usr/local && \
+  # /usr/local/net.downloadhelper.coapp-1.6.3/bin/net.downloadhelper.coapp-linux-64 install --system
 
 RUN \
   echo "**** setup audio text-to-speech features ****" && \
