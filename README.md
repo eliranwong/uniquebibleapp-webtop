@@ -160,6 +160,8 @@ If key combination is same as the host OS, you need to use the virtual keyboard 
 
 Our webtop uses Openbox as the window manager to handle window applications, like Unique Bible App.  You can use key combo, e.g. to switch between four virtual desktops or applications.  For example, alt+ESCAPE could be useful when you want to view other applications opened and placed behind Unique Bible App, which is running in fullscreen view.  You may refer to https://wiki.debian.org/Openbox#Openbox_default_key_combinations for common key combinations on Openbox.
 
+We changed a openbox keyboard binding from "Alt + Tab" to "Ctrl + Alt + Tab" for switching opened applications, to avoid being overrided by the same key binding used by host OS.
+
 For more about autostart in Openbox, read http://openbox.org/wiki/Help:Autostart 
 
 # For developers
