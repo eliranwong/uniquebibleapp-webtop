@@ -145,6 +145,9 @@ RUN \
   sh -c 'echo "QT_IM_MODULE=fcitx" >> /etc/environment'
   # You may read https://wiki.archlinux.org/title/Fcitx5 to learn more about fcitx.
 
+# Change openbox keyboard shortcuts
+RUN sed -E -i.bak 's/<keybind key="A-Tab">/<keybind key="C-A-Tab">/g' /etc/xdg/openbox/rc.xml
+
 RUN \
   echo "**** cleanup ****" && \
   rm -rf \
