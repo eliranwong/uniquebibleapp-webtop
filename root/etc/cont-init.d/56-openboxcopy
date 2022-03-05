@@ -26,33 +26,15 @@
     # Therefore, gdown is installed globally
     runuser -l abc -c 'pip3 install gdown'
 # Install some Unique Bible App files or databases if they do not exist in UBA directory
-[[ -f "/defaults/uba/UniqueBibleApp.sh" && ! -f "/config/UniqueBible/UniqueBibleApp.sh" ]] && \
-    cp /defaults/uba/UniqueBibleApp.sh /config/UniqueBible/UniqueBibleApp.sh && \
-    chmod +x /config/UniqueBible/UniqueBibleApp.sh && \
-    chown abc:abc /config/UniqueBible/UniqueBibleApp.sh
-[[ -f "/defaults/uba/bibles.sqlite" && ! -f "/config/UniqueBible/marvelData/bibles.sqlite" ]] && \
-    cp /defaults/uba/bibles.sqlite /config/UniqueBible/marvelData/bibles.sqlite && \
-    chown abc:abc /config/UniqueBible/marvelData/bibles.sqlite && \
-    rm /defaults/uba/bibles.sqlite
-[[ -f "/defaults/uba/images.sqlite" && ! -f "/config/UniqueBible/marvelData/images.sqlite" ]] && \
-    cp /defaults/uba/images.sqlite /config/UniqueBible/marvelData/images.sqlite && \
-    chown abc:abc /config/UniqueBible/marvelData/images.sqlite && \
-    rm "/defaults/uba/images.sqlite"
-[[ -f "/defaults/uba/indexes2.sqlite" && ! -f "/config/UniqueBible/marvelData/indexes2.sqlite" ]] && \
-    cp /defaults/uba/indexes2.sqlite /config/UniqueBible/marvelData/indexes2.sqlite && \
-    chown abc:abc /config/UniqueBible/marvelData/indexes2.sqlite && \
-    rm "/defaults/uba/indexes2.sqlite"
-[[ -f "/defaults/uba/morphology.sqlite" && ! -f "/config/UniqueBible/marvelData/morphology.sqlite" ]] && \
-    cp /defaults/uba/morphology.sqlite /config/UniqueBible/marvelData/morphology.sqlite && \
-    chown abc:abc /config/UniqueBible/marvelData/morphology.sqlite && \
-    rm "/defaults/uba/morphology.sqlite"
-[[ -f "/defaults/uba/cCBSC.commentary" && ! -f "/config/UniqueBible/marvelData/commentaries/cCBSC.commentary" ]] && \
-    cp /defaults/uba/cCBSC.commentary /config/UniqueBible/marvelData/commentaries/cCBSC.commentary && \
-    chown abc:abc /config/UniqueBible/marvelData/commentaries/cCBSC.commentary && \
-    rm /defaults/uba/cCBSC.commentary
-[[ -f "/defaults/uba/wordnet.dct.mybible" && ! -f "/config/UniqueBible/thirdParty/dictionaries/wordnet.dct.mybible" ]] && \
-    cp /defaults/uba/wordnet.dct.mybible /config/UniqueBible/thirdParty/dictionaries/wordnet.dct.mybible && \
-    chown abc:abc /config/UniqueBible/thirdParty/dictionaries/wordnet.dct.mybible
-[[ -f "/defaults/uba/WordNet_Ctrl+Shift+D.py" && ! -f "/config/UniqueBible/plugins/context/WordNet_Ctrl+Shift+D.py" ]] && \
-    cp /defaults/uba/WordNet_Ctrl+Shift+D.py /config/UniqueBible/plugins/context/WordNet_Ctrl+Shift+D.py && \
-    chown abc:abc /config/UniqueBible/plugins/context/WordNet_Ctrl+Shift+D.py
+copyMissingFiles () { [[ -f $1 && ! -f $2 ]] && cp $1 $2 && chown abc:abc $2; }
+copyMissingFiles "/defaults/uba/UniqueBibleApp.sh" "/config/UniqueBible/UniqueBibleApp.sh"
+chmod +x /config/UniqueBible/UniqueBibleApp.sh
+copyMissingFiles "/defaults/uba/bibles.sqlite" "/config/UniqueBible/marvelData/bibles.sqlite"
+copyMissingFiles "/defaults/uba/images.sqlite" "/config/UniqueBible/marvelData/images.sqlite"
+copyMissingFiles "/defaults/uba/indexes2.sqlite" "/config/UniqueBible/marvelData/indexes2.sqlite"
+copyMissingFiles "/defaults/uba/morphology.sqlite" "/config/UniqueBible/marvelData/morphology.sqlite"
+copyMissingFiles "/defaults/uba/cCBSC.commentary" "/config/UniqueBible/marvelData/commentaries/cCBSC.commentary"
+copyMissingFiles "/defaults/uba/wordnet.dct.mybible" "/config/UniqueBible/thirdParty/dictionaries/wordnet.dct.mybible"
+copyMissingFiles "/defaults/uba/WordNet_Ctrl+Shift+D.py" "/config/UniqueBible/plugins/context/WordNet_Ctrl+Shift+D.py"
+copyMissingFiles "/defaults/uba/Google-chrome.py" "/config/UniqueBible/plugins/menu/Google-chrome.py"
+copyMissingFiles "/defaults/uba/Signal-desktop" "/config/UniqueBible/plugins/menu/Signal-desktop.py"

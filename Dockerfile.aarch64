@@ -22,6 +22,8 @@ RUN \
     gcc \
     glibc \
     gtk3 \
+    jre-openjdk \
+    go \
     lame \
     python-pip \
     python-setuptools \
@@ -72,8 +74,7 @@ RUN \
     # mousepad \
     geany \
     firefox \
-    jre-openjdk \
-    libreoffice-still \
+    # libreoffice-still \
     sqlitebrowser \
     gthumb \
     vlc && \
@@ -124,11 +125,11 @@ RUN mkdir -p /usr/share/fonts/truetype/google-fonts
 RUN find /usr/share/fonts-main/ -name "*.ttf" -exec install -m644 {} /usr/share/fonts/truetype/google-fonts/ \; || return 1
 RUN rm -f gf.tar.gz
 # To manually install wps-fonts
-RUN git clone https://github.com/iamdh4/ttf-wps-fonts.git
-RUN mkdir /usr/share/fonts/wps-fonts
-RUN mv ttf-wps-fonts/* /usr/share/fonts/wps-fonts
-RUN chown -R :users /usr/share/fonts/wps-fonts
-RUN rm -rf ttf-wps-fonts
+# RUN git clone https://github.com/iamdh4/ttf-wps-fonts.git
+# RUN mkdir /usr/share/fonts/wps-fonts
+# RUN mv ttf-wps-fonts/* /usr/share/fonts/wps-fonts
+# RUN chown -R :users /usr/share/fonts/wps-fonts
+# RUN rm -rf ttf-wps-fonts
 # Build font information caches
 RUN fc-cache -f && rm -rf /var/cache/*
 
@@ -147,6 +148,13 @@ RUN \
 
 # Change openbox keyboard shortcuts
 RUN sed -E -i.bak 's/<keybind key="A-Tab">/<keybind key="C-A-Tab">/g' /etc/xdg/openbox/rc.xml
+
+# Install AUR packages
+RUN echo "**** install aur packages ****"
+RUN git clone https://aur.archlinux.org/yay-git.git /opt/yay
+# RUN chown -R abc:users /opt/yay
+# RUN runuser -l abc -c 'cd /opt/yay && makepkg -si --noconfirm --needed && cd -'
+# RUN runuser -l abc -c 'yay -Syu --noconfirm --needed wps-office wps-office-fonts ttf-wps-fonts'
 
 RUN \
   echo "**** cleanup ****" && \
