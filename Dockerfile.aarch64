@@ -79,9 +79,9 @@ RUN \
     gthumb \
     vlc && \
   # Install Firfox addon Video DownloadHelper Companion App 1.6.3
-  wget https://github.com/mi-g/vdhcoapp/releases/download/v1.6.3/net.downloadhelper.coapp-1.6.3-1_amd64.tar.gz && \
-  tar xf net.downloadhelper.coapp-1.6.3-1_amd64.tar.gz -C /usr/local && \
-  /usr/local/net.downloadhelper.coapp-1.6.3/bin/net.downloadhelper.coapp-linux-64 install --system
+  #wget https://github.com/mi-g/vdhcoapp/releases/download/v1.6.3/net.downloadhelper.coapp-1.6.3-1_amd64.tar.gz && \
+  #tar xf net.downloadhelper.coapp-1.6.3-1_amd64.tar.gz -C /usr/local && \
+  #/usr/local/net.downloadhelper.coapp-1.6.3/bin/net.downloadhelper.coapp-linux-64 install --system
 
 RUN \
   echo "**** setup audio text-to-speech features ****" && \
@@ -102,10 +102,10 @@ RUN \
     # > gtts-cli 'hello' --output hello.mp3
     # > mpg123 hello.mp3
 
-#RUN \
-  #echo "**** fix audio for macOS users ****" && \
+RUN \
+  echo "**** fix audio for macOS users ****" && \
   # macOS users should read https://github.com/eliranwong/ArchLinuxWebtop#setup-audio-macos-users-only
-  #sh -c 'echo "PULSE_SERVER=host.docker.internal" >> /etc/environment'
+  sh -c 'echo "PULSE_SERVER=host.docker.internal" >> /etc/environment'
 
 RUN \
   echo "**** install fonts ****" && \
