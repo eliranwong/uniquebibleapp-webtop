@@ -102,10 +102,10 @@ RUN \
     # > gtts-cli 'hello' --output hello.mp3
     # > mpg123 hello.mp3
 
-#RUN \
-  #echo "**** fix audio for macOS users ****" && \
+RUN \
+  echo "**** fix audio for macOS users ****" && \
   # macOS users should read https://github.com/eliranwong/ArchLinuxWebtop#setup-audio-macos-users-only
-  #sh -c 'echo "PULSE_SERVER=host.docker.internal" >> /etc/environment'
+  sh -c 'echo "PULSE_SERVER=host.docker.internal" >> /etc/environment'
 
 RUN \
   echo "**** install fonts ****" && \
