@@ -36,5 +36,3 @@ copyMissingFiles "/defaults/uba/morphology.sqlite" "/config/UniqueBible/marvelDa
 copyMissingFiles "/defaults/uba/cCBSC.commentary" "/config/UniqueBible/marvelData/commentaries/cCBSC.commentary"
 copyMissingFiles "/defaults/uba/wordnet.dct.mybible" "/config/UniqueBible/thirdParty/dictionaries/wordnet.dct.mybible"
 copyMissingFiles "/defaults/uba/WordNet_Ctrl+Shift+D.py" "/config/UniqueBible/plugins/context/WordNet_Ctrl+Shift+D.py"
-copyMissingFiles "/defaults/uba/Google-chrome.py" "/config/UniqueBible/plugins/menu/Google-chrome.py"
-copyMissingFiles "/defaults/uba/Signal-desktop" "/config/UniqueBible/plugins/menu/Signal-desktop.py"

@@ -75,7 +75,7 @@ RUN \
     geany \
     firefox \
     # libreoffice-still \
-    sqlitebrowser \
+    # sqlitebrowser \
     gthumb \
     vlc && \
   # Install Firfox addon Video DownloadHelper Companion App 1.6.3
