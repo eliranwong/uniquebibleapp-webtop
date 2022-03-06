@@ -74,6 +74,7 @@ RUN \
     # mousepad \
     geany \
     firefox \
+    falkon \
     # libreoffice-still \
     # sqlitebrowser \
     gthumb \
